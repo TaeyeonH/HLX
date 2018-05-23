@@ -1,0 +1,23 @@
+
+<template name="jokeItem">
+  <view class='item-view'>
+     <text class='content'>{{item.content}}</text>
+     <text class='date'>{{item.updatetime}}</text>
+  </view>
+</template>
+
+<template name="pictrueItem">
+   <view class='item-view'>
+      <text class='content'>{{item.content}}</text>
+      <!--  mode 指图片裁剪，缩放模式  -->
+      <image src='{{item.url}}' mode='aspectFit' bindtap='preview' data-url="{{item.url}}"></image>
+   </view>
+
+</template>
+
+<template name="loadingFooter">
+  <view class='loading-view' hidden='{{hideFooter}}'>
+     <image src='../../image/loading.gif' style='height:26px;width:26px'></image>
+     <text style='font-size:20px'>loading....</text>
+  </view>
+</template>

@@ -1,0 +1,39 @@
+<!--pages/headline/headline.wxml-->
+ <view class='section'>
+<view class='section_title'>纵向滚动</view>
+<scroll-view scroll-y = "true" style='height:200px;' bindscrolltoupper = "upper" bindscrolltolower = "lower" bindscroll = "scroll" scroll-into-view = "{{toView}}" scroll-top = "{{scrollTop}}">
+<view id='green' style='width:100%;height:100px;backgroud-color:green;'>1</view>
+<view id='pink' style='width:100%;height:100px;backgroud-color:pink;'>2</view>
+<view id='blue' style='width:100%;height:100px;backgroud-color:blue;'>3</view>
+<view id='red'  style='width:100%;height:100px;backgroud-color:red;'>4</view>
+</scroll-view>
+
+
+<view class='btn-area'>
+<button type='default' style='margin:10px;' bindtap='tap'>click it</button>
+<button type='default' style='margin:10px;' bindtap='tapMove'>move it</button>
+</view>
+
+</view> 
+
+
+<view class='section'>
+<view class='section_title'>横向滚动</view>
+<scroll-view scroll-x = "true" style='width:100%;'>
+<view style='display:flex;flex-direction:row'>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+<view style='margin-right:10px'>周杰伦</view>
+</view>
+</scroll-view>
+</view>
+

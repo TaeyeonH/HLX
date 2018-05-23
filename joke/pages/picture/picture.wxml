@@ -1,0 +1,9 @@
+<!--pages/picture/picture.wxml-->
+<import src='../common/common.wxml'/>
+
+<scroll-view class='page-body' scroll-y='true' bindscrolltolower='loadMore' lower-threshold='100'>
+    <template is="pictrueItem" data="{{item,preview}}" wx:for="{{picList}}"/>
+    <template is="loadingFooter" data="{{hideFooter}}"/>
+</scroll-view>
+
+<loading hidden="{{loadingHide}}">loading...</loading>

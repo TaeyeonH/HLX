@@ -1,0 +1,62 @@
+<!--pages/cook/cook.wxml-->
+<view class='content'>
+<view class='img'>
+<swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+
+<block wx:for = '{{imgUrls}}'>
+<swiper-item>
+<image src='{{item}}' style='width:100%;height:230px' class='silde-image'></image>
+</swiper-item>
+</block>
+</swiper>
+</view>
+
+
+<view class='nav'>
+<view class='nav-item'>
+<view><image src='../images/icon/fenlei.jpg' style='width:25px;height:23px'></image></view>
+<view>菜谱分类</view>
+</view>
+
+<view class='nav-item'>
+<view><image src='../images/icon/shipin.jpg' style='width:25px;height:23px'></image></view>
+<view>视频</view>
+</view>
+
+<view class='nav-item'>
+<view><image src='../images/icon/meishi.jpg' style='width:25px;height:23px'></image></view>
+<view>美食养生</view>
+</view>
+
+<view class='nav-item'>
+<view><image src='../images/icon/shangou.jpg' style='width:25px;height:23px'></image></view>
+<view>闪购</view>
+</view>
+</view>
+<view class='hr'></view>
+
+<view class='head'>
+<view>周杰伦头条</view>
+<view class='right'>></view>
+</view>
+
+<view class='list'>
+<block wx:for = "{{array}}">
+<view class='item' bindtap='seeDetail' id='0'>
+<view>
+<image src='{{item.img}}' style='width:75px;height:58px'></image>
+</view>
+<view class='desc'>
+<view class='title'>{{item.title}}</view>
+<view class='count'>
+<view>{{item.type}}</view>
+<view class='liulan'>{{item.liulan}}</view>
+<view class='pinglun'>{{item.pinglun}}</view>
+</view>
+</view>
+</view>
+<view class='hr2'></view>
+</block>
+</view>
+</view>
+

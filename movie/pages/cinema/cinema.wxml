@@ -1,0 +1,37 @@
+<!--pages/cinema/cinema.wxml-->
+<view>{{text}}</view>
+ <button bindtap='changeText' class='btn'>change normal data</button>
+ <view>{{array[0].text}}</view>
+ <button bindtap='changeItemArray'>change item array</button>
+ <view>{{object.text}}</view>
+ <button bindtap='changeObjectItem'>change item object</button>
+ <view>{{newField.text}}</view>
+ <button bindtap='addNewFiled'>Add New Filed</button>
+
+ <view id = "item-{{id}}"></view>
+
+ <view wx:if = "{{condition}}">text</view>
+
+ <checkbox checked='{{case}}'>选择吧</checkbox>
+<!-- wx:for绑定一个数组，会默认该数组当前项的下标变量名为index,数组当前项的变量名默认为item -->
+<!-- <view wx:for = "{{array}}">
+{{index}}:{{item.message}}
+</view> -->
+<!--  block 仅是一个包装元素 使用来包装 wx:for 中会默认该数组的下标变量名为index。数组当前项的变量名默认for中的数据 -->
+<block wx:for = "{{[1,2,3]}}">
+<view>{{index}}:</view>
+<view>{{item}}</view>
+</block>
+
+<switch wx:for="{{objectArray}}" wx:key = "unique" style='display:block'></switch>
+
+<!--  模板  -->
+ <template name = "msgIrem">
+<view>
+<text>{{index}}:{{msg}}</text>
+<text>Time:{{time}}</text>
+</view>
+</template> 
+
+ <template is= "msgItem" data = "{{item}}"/> 
+ 

@@ -1,0 +1,34 @@
+<!--pages/food/food.wxml-->
+
+<view class='content'>
+<view class='loginTitle'>
+<view class="{{currentTab == 0?'select':'default'}}" data-current = "0" bindtap = "switchNav">账号密码登录</view>
+
+<view class="{{currentTab == 1?'select':'default'}}" data-current = "1" bindtap="switchNav">手机快速登录</view>
+</view>
+
+<view class='hr'></view>
+
+<swiper current='{{currentTab}}' style='height:{{winHeight}}px'>
+
+<swiper-item>
+<view style='height:200px; margin-top:10px; width:98%'>
+
+账号：<input type='text' style='border:1px solid pink'></input>
+密码：<input type='password' style='border:1px solid pink'></input>
+<button style='margin-top:20px'>登录</button>
+</view>
+</swiper-item>
+
+<swiper-item>
+<view style='height:200px; margin-top:10px;width:98%'>
+
+<image src='../images/icon/ptqrshow.jpg' style='width:150px;height:150px;margin-left:175px' class='img'></image>
+<view style='margin-left:110px'>请打开手机QQ扫码登录</view>
+
+<progress percent='{{i}}' show-info bindtap='pro'></progress>
+</view>
+</swiper-item>
+
+</swiper>
+</view>

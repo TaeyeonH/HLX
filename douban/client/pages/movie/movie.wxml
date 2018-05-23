@@ -1,0 +1,47 @@
+<!--pages/movie/movie.wxml-->
+<view class='nav'>
+<view id='0' class="{{currentTab == 0?'select':'normal'}}" bindtap='switchNav'>上映中</view>
+<view class='line'>|</view>
+<view id='1' class="{{currentTab == 1?'select':'normal'}}" bindtap='switchNav'>影院</view>
+<view class='line'>|</view>
+<view id='2' class="{{currentTab == 2?'select':'normal'}}" bindtap='switchNav'>我的</view>
+</view>
+<!-- 轮播图 -->
+<swiper current='{{currentTab}}' style='height:{{winHeight}}px'>
+<swiper-item>
+<view class='haibao'>
+<swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' style='height:74px;'>
+<!--  wx:for 控制绑定一个数组用来循环一个数组 其中默认下标变量名为index 数组当前项变量名为item 与wx:for-items 效果一样 -->
+<block wx:for='{{imgUrls}}'>
+<swiper-item>
+<image src='{{item}}' class='slide-image' style='width:100%;height:74px;'></image>
+</swiper-item>
+</block>
+</swiper>
+<!--  电影明细  -->
+</view>
+
+<view class='items'>
+<block wx:for='{{movies}}'>
+<view class='item' bindtap='loadDetail' id='{{item.id}}'>
+<view>
+<image src='{{item.images.medium}}' style='width:100px;height:150px'></image>
+</view>
+<view class='name'><text>{{item.title}}</text></view>
+</view>
+</block>
+</view>
+</swiper-item>
+
+
+<swiper-item>
+<view class='desc' style='height:50px;line-height:60px;color:pink'>常去的影院</view>
+<view class='line1' style='width:100%;border:1px solid grey;margin-top:10px'></view>
+
+</swiper-item>
+
+<swiper-item>
+<view>我看内容</view>
+</swiper-item>
+
+</swiper>
