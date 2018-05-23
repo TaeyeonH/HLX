@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/destination/destination",
+    "pages/explore/explore",
+    "pages/trip/trip",
+    "pages/user/user",
+    "pages/waypoint/waypoint",
+    "pages/poi_list/poi_list",
+    "pages/trip_list/trip_list",
+    "pages/photo_list/photo_list",
+    "pages/place_list/place_list"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#4abdcc",
+    "navigationBarTitleText": "Travel",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color": "#b0b0b0",
+    "selectedColor": "#4abdcc",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index_normal.png",
+        "selectedIconPath": "images/index_pressed.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "iconPath": "images/explore_normal.png",
+        "selectedIconPath": "images/explore_pressed.png",
+        "text": "发现"
+      }
+    ]
+  },
+  "debug":true 
+}

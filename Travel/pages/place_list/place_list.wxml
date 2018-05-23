@@ -1,0 +1,41 @@
+<!--pages/place_list/place_list.wxml-->
+<import src='../../components/widget/rating.wxml' />
+
+<view class='header'>
+  <image style='width:{{windowWidth}}px;' src='{{info.hottest_places[0].photo}}' mode='aspectFill'></image>
+</view>
+
+<view class='title_name'>{{info.name}}</view>
+
+ <view class='rating'  style='overflow:hidden'>
+  <template is='m-rating' data="{{count:info.rating,size:'s'}}" ></template>
+   
+</view> 
+<view wx:if='{{info}}' class='place'>
+  <view class='h2'>
+    <image src='../../images/destination/divide_l.png'></image>
+    <text> 推荐理由 </text>
+    <image src='../../images/destination/divide_r.png'></image>
+  </view>
+  <view class='reason'>{{info.recommended_reason}}</view>
+</view>
+<view class='information'>
+  <view class='h2'>
+    <image src='../../images/destination/divide_l.png'></image>
+    <text> 基本信息 </text>
+    <image src='../../images/destination/divide_r.png'></image>
+</view>
+
+  <view class='title'>概况</view>
+  <view class='description'>{{info.description}}</view>
+  <view class='line_long'></view>
+  <view class='title'>地址</view>
+  <view class='address'>{{info.address}}</view>
+  <view class='line_long'></view>
+  <view class='title'>到达方式</view>
+  <view class='arrival_type'>{{info.arrival_type}}</view>
+  <view class='line_long'></view>
+  <view class='title'>开放时间</view>
+  <view class='opening_time'>{{info.opening_time}}</view>
+  <view class='line_long'></view>
+</view>

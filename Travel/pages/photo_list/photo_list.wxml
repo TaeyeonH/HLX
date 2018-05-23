@@ -1,0 +1,11 @@
+<!--pages/photo_list/photo_list.wxml-->
+
+<scroll-view scroll-y='true' class='list' style='height:{{windowHeight - 70 / pixelRatio}}px;width:{{windowWidth}}px;' bindscrolltolower='loadMore' lower-threshold='800'>
+    <block wx:for='{{photos}}' wx:for-item='pho' wx:key='pho.id'>
+
+    <image style='width:{{windowWidth}}px;' src='{{pho.photo}}' data-src='{{pho.photo}}' mode='aspectFill' bindtap='previewImage'></image>
+    </block>
+    <view wx:if='{{hasMore}}' class='loading'>
+        Loading...
+    </view>
+</scroll-view>

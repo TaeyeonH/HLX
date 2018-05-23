@@ -1,0 +1,22 @@
+<!--pages/poi_list/poi_list.wxml-->
+<import src='../../components/poi/poi.wxml'/>
+
+<scroll-view scroll-x='true' class='header'>
+   <view class='nav'>
+      <view class="{{poiType === 'all'?'selected':''}}" data-type='all' bindtap='changePOIType'>全部</view>
+      <view class="{{poiType === 'sights'?'selected':''}}" data-type='sights' bindtap='changePOIType'>景点</view>
+      <view class="{{poiType === 'hotel'?'selected':''}}" data-type='hotel' bindtap='changePOIType'>旅馆</view>
+      <view class="{{poiType === 'restaurant'?'selected':''}}" data-type='restaurant' bindtap='changePOIType'>餐馆</view>
+      <view class="{{poiType === 'entertainment'?'selected':''}}" data-type='entertainment' bindtap='changePOIType'>娱乐</view>
+      <view class="{{poiType === 'mall'?'selected':''}}" data-type='mall' bindtap='changePOIType'>购物</view>
+   </view>
+</scroll-view>
+
+<scroll-view scroll-y='true' class='list' style='height:{{windowHeight - 70 / pixelRatio}}px;width:{{windowWidth}}px;' bindscrolltolower='loadMore' lower-threshold='800'>
+    <block wx:for='{{pois}}' wx:for-item='poi' wx:key='poi.id'>
+        <template is='m-poi' data='{{poi:poi}}'/>
+    </block>
+    <view wx:if='{{hasMore}}' class='loading'>
+        Loading...
+    </view>
+</scroll-view>

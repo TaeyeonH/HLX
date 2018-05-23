@@ -1,0 +1,74 @@
+/* pages/place_list/place_list.wxss */
+page{
+  background-color: #fbf7ed;
+}
+.m-rating{
+  float: left;
+}
+.m-rating image{
+  width: 16rpx;
+  height: 16rpx;
+  float: left;
+  position: relative;
+  top: -5rpx;
+  margin-right: 8rpx;
+}
+
+.title_name{
+  text-align: center;
+  font-size:30px;
+}
+
+.rating .m-rating{
+  margin-left:42%;
+  margin-top: 10px;
+}
+
+.place .h2{
+  color: #5c5c5c;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+    margin-bottom: 20rpx
+}
+.place .h2 image{
+  width: 146rpx;
+  height: 10rpx;
+  position: relative;
+  top: -4rpx;
+}
+.place .h2 text{
+  margin: 0 40rpx;
+}
+
+.information .h2{
+  color: #5c5c5c;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 20rpx
+}
+.information .h2 image{
+  width: 146rpx;
+  height: 10rpx;
+  position: relative;
+  top: -4rpx;
+}
+.information .h2 text{
+  margin: 0rpx 40rpx;
+}
+
+.reason{
+  text-align: center
+} 
+
+.title{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.line_long{
+  width: 100%;
+  border-bottom: solid grey 0.3px;
+  margin-top: 10px;
+}
+
